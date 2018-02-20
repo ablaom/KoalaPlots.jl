@@ -1,0 +1,12 @@
+# testplot
+
+![testplot.png](testplot.png)
+
+ConstantRegressor@...630
+
+key                     | value
+------------------------|------------------------
+n                       |1
+
+
+
