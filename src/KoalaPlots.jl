@@ -68,7 +68,6 @@ function bootstrap_histogram(v; label=string(now().instant.periods.value), plot_
 
 end
 
-
 function bootstrap_histogram!(v; label=string(now().instant.periods.value), plot_args...)
 
     bootstrap = bootstrap_resample_of_mean(v)
@@ -79,7 +78,7 @@ end
 
 
 """
-## `recordfig(filename, models...)`
+    recordfig(filename, models...)
 
 Save the current `Plots` figure as a PNG file called `filename` (which
 must include ".png" extension) and generate a markdown report
@@ -92,6 +91,7 @@ For example, if the filename is "assets/myplot.png" then two files
 
 """
 function recordfig(figure_filename::String, models...)
+    isdefined(Plots, :savefig) || error("Cannot record figures without Plots imported.")
     local_figure_filename = match(r"([^\/]*)$", figure_filename)[1]
     title = match(r"(.*)\..*$", local_figure_filename)[1]
     md_filename = match(r"(.*)\..*$", figure_filename)[1] * ".md"
@@ -104,7 +104,7 @@ function recordfig(figure_filename::String, models...)
             println(md_file, "\n\n")
         end
     end
-    println("Recorded figure and metadata at $md_filename.")
+    info("Recorded figure and metadata at $md_filename.")
 end
 
 
