@@ -1,6 +1,8 @@
 # KoalaPlots
 
-Plotting functions for use with Koala.jl that require Plots to be imported.
+Plotting functions for use with
+[Koala](https://github.com/ablaom/Koala.jl) that require
+[Plots](https://github.com/JuliaPlots/Plots.jl) to be imported.
 
 ### Methods
 

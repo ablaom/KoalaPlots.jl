@@ -2,9 +2,9 @@
 
 ![testplot.png](testplot.png)
 
-ConstantRegressor@...630
+ConstantRegressor@...655
 
-key                     | value
+key or field            | value
 ------------------------|------------------------
 n                       |1
 
